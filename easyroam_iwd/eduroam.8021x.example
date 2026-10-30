@@ -1,0 +1,21 @@
+[Settings]
+AutoConnect=false
+[Security]
+EAP-Method=TLS
+EAP-Identity=<easyroam profile serial>@<domain>
+EAP-TLS-ServerDomainMask=easyroam.eduroam.de
+EAP-TLS-ClientCert=embed:easyroam_client_cert.pem
+EAP-TLS-ClientKey=embed:easyroam_client_key.pem
+EAP-TLS-CACert=embed:easyroam_ca_cert.pem
+[@pem@easyroam_ca_cert.pem]
+-----BEGIN CERTIFICATE-----
+<ca certificate>
+----END CERTIFICATE-----
+[@pem@easyroam_client_cert.pem]
+-----BEGIN CERTIFICATE-----
+<client certificate>
+----END CERTIFICATE-----
+[@pem@easyroam_client_key.pem]
+-----BEGIN PRIVATE KEY-----
+<client private key>
+----END PRIVATE KEY-----
